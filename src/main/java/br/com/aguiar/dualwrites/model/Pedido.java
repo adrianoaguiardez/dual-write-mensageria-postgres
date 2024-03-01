@@ -55,9 +55,8 @@ public class Pedido {
 	@JoinColumn(name = "id_cliente")
 	private Cliente cliente;
 
-	@JsonIgnore
 	@OneToMany(mappedBy = "pedido")
-	private List<ItemPedido> produtos = new ArrayList<>();
+	private List<ItemPedido> produtos = new ArrayList<ItemPedido>();
 
 	public void adicionarItem(Produto produto, BigDecimal quantidade) {
 

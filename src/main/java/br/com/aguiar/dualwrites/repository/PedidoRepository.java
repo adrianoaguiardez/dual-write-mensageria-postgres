@@ -21,6 +21,6 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long>{
 
 
     @Query(value = "SELECT pg_notify(:topic, :json)", nativeQuery = true)
-	void getPgNotifyPedido(@Param("topic") String topic, @Param("json") String json);
+	void getPgEnvioMensagemPedidoAberto(@Param("topic") String topic, @Param("json") String json);
 
 }

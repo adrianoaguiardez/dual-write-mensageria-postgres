@@ -49,7 +49,7 @@ public class Tarefa {
 
     private boolean validarPedido(Pedido pedido) {
 
-        pedidoRepository.getPgNotifyPedido("list_pedido", ObjecMapperUtil.toJson(pedido));
+        pedidoRepository.getPgEnvioMensagemPedidoAberto("list_pedido", ObjecMapperUtil.toJson(pedido));
 
         return false;
     }
